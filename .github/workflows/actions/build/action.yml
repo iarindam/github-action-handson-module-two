@@ -8,3 +8,8 @@ runs:
         npm install remark-cli remark-preset-lint-consistent
         npx remark . --use remark-preset-lint-consistent --frail
       shell: bash
+    - name: Upload remark lint report
+      uses: actions/upload-artifact@v3
+      with:
+        name: remark-lint-report
+        path: public/
